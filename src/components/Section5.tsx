@@ -13,7 +13,7 @@ const services = [
     "RFID",
 ];
 
-const serviceDetails = {
+const serviceDetails: Record<string, string[]> = {
     "Software Development": [
         "Offshore Software Development",
         "Web Application Development",
@@ -66,7 +66,7 @@ const Section5 = () => {
                 <div className="w-full lg:w-2/3 bg-gray-50 p-6 py-10 rounded-lg">
                     <h3 className="text-2xl font-bold mb-4">{selected}</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {serviceDetails[selected]?.map((item, index) => (
+                        {serviceDetails[selected]?.map((item: string, index: number) => (
                             <div key={index} className="flex gap-2 items-start">
                                 <span className="text-black text-md">▣</span>
                                 <p className="text-gray-700 text-sm">{item}</p>

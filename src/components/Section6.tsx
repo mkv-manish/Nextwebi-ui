@@ -2,7 +2,6 @@ import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import "swiper/css";
 
 const caseStudies = [
     {
@@ -58,9 +57,9 @@ const Section6 = () => {
                     nextEl: nextRef.current,
                 }}
                 onInit={(swiper) => {
-                    // @ts-ignore
+                    // @ts-expect-error - Swiper navigation properties are not properly typed
                     swiper.params.navigation.prevEl = prevRef.current;
-                    // @ts-ignore
+                    // @ts-expect-error - Swiper navigation properties are not properly typed
                     swiper.params.navigation.nextEl = nextRef.current;
                     swiper.navigation.init();
                     swiper.navigation.update();

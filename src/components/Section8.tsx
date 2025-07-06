@@ -2,8 +2,7 @@ import { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
-import "swiper/css";
-import "swiper/css/navigation";
+import type { Swiper as SwiperType } from "swiper";
 
 const solutions = [
     {
@@ -43,11 +42,13 @@ const solutions = [
 const Section8 = () => {
     const prevRef = useRef<HTMLButtonElement>(null);
     const nextRef = useRef<HTMLButtonElement>(null);
-    const swiperRef = useRef<any>(null);
+    const swiperRef = useRef<SwiperType | null>(null);
 
     useEffect(() => {
-        if (swiperRef.current && swiperRef.current.params) {
+        if (swiperRef.current && swiperRef.current.params && swiperRef.current.params.navigation) {
+            // @ts-expect-error - Swiper navigation properties
             swiperRef.current.params.navigation.prevEl = prevRef.current;
+            // @ts-expect-error - Swiper navigation properties
             swiperRef.current.params.navigation.nextEl = nextRef.current;
             swiperRef.current.navigation.init();
             swiperRef.current.navigation.update();

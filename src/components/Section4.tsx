@@ -1,4 +1,4 @@
-import { Image } from "lucide-react";
+
 
 const techStack = [
     {
@@ -84,7 +84,7 @@ const Section4 = () => {
                                 key={tech.name}
                                 className="flex items-center gap-2 bg-white py-2 px-4 rounded-full shadow text-sm hover:scale-105 transition"
                             >
-                                <Image
+                                <img
                                     src={tech.icon}
                                     alt={tech.name}
                                     width={20}

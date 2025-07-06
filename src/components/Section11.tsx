@@ -1,16 +1,15 @@
-"use client";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+type ServiceKey = "software" | "application" | "security" | "marketing";
+
 const categories = [
-    { label: "Software Development", key: "software" },
-    { label: "Application Development", key: "application" },
-    { label: "Security Testing & Maintenance", key: "security" },
-    { label: "Digital Marketing", key: "marketing" },
+    { label: "Software Development", key: "software" as ServiceKey },
+    { label: "Application Development", key: "application" as ServiceKey },
+    { label: "Security Testing & Maintenance", key: "security" as ServiceKey },
+    { label: "Digital Marketing", key: "marketing" as ServiceKey },
 ];
 
 const services = {
@@ -97,7 +96,7 @@ const services = {
 };
 
 const Section11 = () => {
-    const [active, setActive] = useState("software");
+    const [active, setActive] = useState<ServiceKey>("software");
 
     return (
         <section className="py-16 bg-[#f9fbfd]">
@@ -144,7 +143,7 @@ const Section11 = () => {
                         1024: { slidesPerView: 3, spaceBetween: 30 },
                     }}
                 >
-                    {services[active].map((svc, i) => (
+                    {services[active].map((svc: { title: string; description: string; image: string }, i: number) => (
                         <SwiperSlide key={i}>
                             <div className="bg-white rounded-lg shadow-lg overflow-hidden transition hover:shadow-xl">
                                 <img

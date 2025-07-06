@@ -4,7 +4,6 @@ import { useState } from "react";
 // import { cn } from "@/lib/utils";
 
 const ContactPage = () => {
-    const [captchaValue, setCaptchaValue] = useState("");
     const [num1, setNum1] = useState(Math.floor(Math.random() * 10));
     const [num2, setNum2] = useState(Math.floor(Math.random() * 10));
     const [captchaInput, setCaptchaInput] = useState("");
