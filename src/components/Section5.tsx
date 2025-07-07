@@ -27,7 +27,7 @@ const serviceDetails: Record<string, string[]> = {
         "On premise app development",
         "CRM Application Development",
     ],
-    // Add more service details as needed
+    
 };
 
 const Section5 = () => {

@@ -40,9 +40,9 @@ const Section3 = () => {
                         </p>
                     </div>
 
-                    {/* Testimonials Box with angled background */}
+                    
                     <div className="relative">
-                        {/* Blue angled background */}
+                        
                         <div />
 
                         <Swiper

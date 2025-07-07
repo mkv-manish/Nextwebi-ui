@@ -1,4 +1,4 @@
-// Industry Specializations
+
 import {
     ShoppingCart,
     HeartPulse,

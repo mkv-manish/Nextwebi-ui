@@ -1,7 +1,5 @@
 import { useState } from "react";
-// If you have a utility for class concatenation like clsx or classnames,
-// you can import it here. For this example, we'll use direct Tailwind classes.
-// import { cn } from "@/lib/utils";
+
 
 const ContactPage = () => {
     const [num1, setNum1] = useState(Math.floor(Math.random() * 10));
@@ -11,7 +9,7 @@ const ContactPage = () => {
     const refreshCaptcha = () => {
         setNum1(Math.floor(Math.random() * 10));
         setNum2(Math.floor(Math.random() * 10));
-        setCaptchaInput(""); // Clear the input field on refresh
+        setCaptchaInput(""); 
     };
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -20,21 +18,19 @@ const ContactPage = () => {
             alert(
                 "Captcha correct! Form submitted (not really, this is just a demo)."
             );
-            // Here you would typically send form data to your backend
+           
         } else {
             alert("Incorrect captcha. Please try again.");
-            refreshCaptcha(); // Refresh captcha on incorrect attempt
+            refreshCaptcha();
         }
     };
 
     return (
-        // Main container has a dark blue background only at the very bottom
-        // The top part with the content is white
+        
         <section className="min-h-screen bg-[#1b2a50] flex flex-col items-center">
             <div className="w-full bg-white flex flex-col md:flex-row pb-16 md:pb-0">
                 {" "}
-                {/* Adjusted for bottom dark blue */}
-                {/* Left Section: Get in Touch */}
+                
                 <div className="w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
                         Get in Touch
@@ -103,7 +99,7 @@ const ContactPage = () => {
                                 <p className="text-gray-600 flex items-center space-x-2">
                                     <span className="flex items-center">
                                         <img
-                                            src="https://flagcdn.com/w20/in.png" // Example India flag
+                                            src="https://flagcdn.com/w20/in.png" 
                                             alt="India flag"
                                             className="h-3 w-auto mr-1 inline-block"
                                         />
@@ -111,7 +107,7 @@ const ContactPage = () => {
                                     </span>
                                     <span className="flex items-center">
                                         <img
-                                            src="https://flagcdn.com/w20/ae.png" // Example UAE flag
+                                            src="https://flagcdn.com/w20/ae.png" 
                                             alt="UAE flag"
                                             className="h-3 w-auto mr-1 inline-block"
                                         />
@@ -149,10 +145,9 @@ const ContactPage = () => {
                         </div>
                     </div>
                 </div>
-                {/* Right Section: Collaborate Form with overlap */}
-                {/* Added negative margins (md:-mt-6 md:-mb-6) and z-index to create the overlap effect */}
+               
                 <div className="w-full md:w-1/2 bg-white shadow-xl rounded-lg overflow-hidden md:-mt-6 md:-mb-10 relative z-10">
-                    {/* Header for the form with blue background */}
+                   
                     <div className="bg-blue-600 text-white py-4 px-8 text-center">
                         <h2 className="text-2xl md:text-3xl font-bold">
                             Collaborate with Nextwebi
@@ -227,7 +222,7 @@ const ContactPage = () => {
                                 <div className="flex items-center">
                                     <span className="inline-flex items-center p-3 rounded-l-md bg-gray-100 text-gray-700 border border-gray-300">
                                         <img
-                                            src="https://flagcdn.com/w20/in.png" // Example India flag
+                                            src="https://flagcdn.com/w20/in.png" 
                                             alt="India flag"
                                             className="h-4 w-auto mr-1"
                                         />
@@ -355,8 +350,7 @@ const ContactPage = () => {
                     </form>
                 </div>
             </div>
-            {/* This div creates the dark blue background at the very bottom */}
-            {/* Adjust height as needed */}
+            
         </section>
     );
 };

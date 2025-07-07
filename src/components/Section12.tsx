@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-// Example stats
+
 const stats = [
     { count: "9+", label: "Years in Business" },
     { count: "1600+", label: "Projects Delivered" },
@@ -8,7 +8,7 @@ const stats = [
     { count: "20+", label: "Countries Served" },
 ];
 
-// All logos
+
 const allClients = [
     "/case1.jpg",
     "/case2.jpg",
@@ -27,7 +27,7 @@ const allClients = [
     "/case3.jpg",
 ];
 
-// Component
+
 const Section12 = () => {
     const [logos, setLogos] = useState<string[][]>([]);
 
@@ -51,14 +51,14 @@ const Section12 = () => {
             startIndex = (startIndex + cols) % allClients.length;
         };
 
-        rotate(); // first load
+        rotate();
         const interval = setInterval(rotate, 2500);
         return () => clearInterval(interval);
     }, []);
 
     return (
         <section className="bg-white py-16">
-            {/* Stats */}
+            
             <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center mb-12">
                 {stats.map((item, i) => (
                     <div
@@ -73,7 +73,7 @@ const Section12 = () => {
                 ))}
             </div>
 
-            {/* Headings */}
+            
             <div className="text-center max-w-4xl mx-auto mb-8 px-4">
                 <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
                     Trusted by 600+ Startups and
@@ -94,7 +94,7 @@ const Section12 = () => {
                 </a>
             </div>
 
-            {/* Auto rotating logos */}
+            
             <div className="max-w-4xl mx-auto overflow-hidden">
                 <div className="grid grid-cols-4 gap-6">
                     {logos.flat().map((src, i) => (
