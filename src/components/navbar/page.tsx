@@ -26,6 +26,18 @@ const Navbar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    // Close mobile menu when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (isOpen && !(event.target as Element).closest('.mobile-menu')) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, [isOpen]);
+
     return (
         <header
             className={`fixed w-full py-2 z-50 transition-all duration-300 ${
@@ -34,7 +46,7 @@ const Navbar = () => {
         >
             <div className="container mx-auto px-4 py-3 flex justify-between items-center">
                 {/* Logo */}
-                <Link to="/" className="text-3xl font-bold text-blue-800">
+                <Link to="/" className="text-2xl sm:text-3xl font-bold text-blue-800">
                     Next<span className="text-sky-400">webi</span>
                 </Link>
 
@@ -44,7 +56,7 @@ const Navbar = () => {
                         <Link
                             key={item.to}
                             to={item.to}
-                            className="hover:text-blue-600"
+                            className="hover:text-blue-600 transition-colors"
                         >
                             {item.label}
                         </Link>
@@ -59,7 +71,11 @@ const Navbar = () => {
 
                 {/* Mobile Menu Icon */}
                 <div className="md:hidden">
-                    <button onClick={toggleMenu}>
+                    <button 
+                        onClick={toggleMenu}
+                        className="p-2 rounded-md hover:bg-gray-100 transition-colors"
+                        aria-label="Toggle menu"
+                    >
                         {isOpen ? (
                             <X className="h-6 w-6 text-black" />
                         ) : (
@@ -71,25 +87,27 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden bg-white text-black shadow-md">
-                    <div className="px-4 py-4 flex flex-col space-y-4 text-sm font-medium">
+                <div className="md:hidden bg-white text-black shadow-lg mobile-menu">
+                    <div className="px-4 py-6 flex flex-col space-y-4 text-sm font-medium">
                         {navLinks.map((item) => (
                             <Link
                                 key={item.to}
                                 to={item.to}
                                 onClick={toggleMenu}
-                                className="hover:text-blue-600"
+                                className="py-3 px-2 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
                             >
                                 {item.label}
                             </Link>
                         ))}
-                        <Link
-                            to="/contact"
-                            onClick={toggleMenu}
-                            className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition"
-                        >
-                            Contact Us
-                        </Link>
+                        <div className="pt-4 border-t border-gray-200">
+                            <Link
+                                to="/contact"
+                                onClick={toggleMenu}
+                                className="block bg-red-600 text-white px-4 py-3 rounded-md hover:bg-red-700 transition text-center"
+                            >
+                                Contact Us
+                            </Link>
+                        </div>
                     </div>
                 </div>
             )}

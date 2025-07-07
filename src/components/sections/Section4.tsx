@@ -57,9 +57,9 @@ const techStack = [
 
 const Section4 = () => {
     return (
-        <section className="max-w-7xl mx-auto px-4 py-8 space-y-8">
-            <div className="text-center py-10 px-4">
-                <h1 className="text-3xl md:text-4xl font-bold mb-4 text-blue-400">
+        <section className="max-w-7xl mx-auto px-4 py-6 sm:py-8 space-y-6 sm:space-y-8">
+            <div className="text-center py-8 sm:py-10 px-4">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-blue-400">
                     Hire Tech Experts
                 </h1>
                 <p className="text-gray-700 max-w-3xl mx-auto text-sm md:text-base">
@@ -73,22 +73,23 @@ const Section4 = () => {
             {techStack.map((section) => (
                 <div
                     key={section.category}
-                    className={`${section.bg} p-6 rounded-lg`}
+                    className={`${section.bg} p-4 sm:p-6 rounded-lg`}
                 >
-                    <h3 className="text-lg md:text-xl font-bold mb-4">
+                    <h3 className="text-base sm:text-lg md:text-xl font-bold mb-3 sm:mb-4">
                         {section.category}
                     </h3>
-                    <div className="flex flex-wrap gap-4">
+                    <div className="flex flex-wrap gap-2 sm:gap-4">
                         {section.technologies.map((tech) => (
                             <div
                                 key={tech.name}
-                                className="flex items-center gap-2 bg-white py-2 px-4 rounded-full shadow text-sm hover:scale-105 transition"
+                                className="flex items-center gap-1 sm:gap-2 bg-white py-1.5 sm:py-2 px-2 sm:px-4 rounded-full shadow text-xs sm:text-sm hover:scale-105 transition"
                             >
                                 <img
                                     src={tech.icon}
                                     alt={tech.name}
-                                    width={20}
-                                    height={20}
+                                    width={16}
+                                    height={16}
+                                    className="w-4 h-4 sm:w-5 sm:h-5"
                                 />
                                 <span>{tech.name}</span>
                             </div>

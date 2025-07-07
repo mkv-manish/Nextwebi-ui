@@ -28,19 +28,19 @@ const ContactPage = () => {
     return (
         
         <section className="min-h-screen bg-[#1b2a50] flex flex-col items-center">
-            <div className="w-full bg-white flex flex-col md:flex-row pb-16 md:pb-0">
+            <div className="w-full bg-white flex flex-col lg:flex-row pb-16 lg:pb-0">
                 {" "}
                 
-                <div className="w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-center">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+                <div className="w-full lg:w-1/2 p-6 sm:p-8 lg:p-16 flex flex-col justify-center">
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-6 sm:mb-8">
                         Get in Touch
                     </h2>
 
-                    <div className="mb-8">
-                        <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                    <div className="mb-6 sm:mb-8">
+                        <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2">
                             What Drive Us ?
                         </h3>
-                        <p className="text-gray-600 leading-relaxed">
+                        <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
                             Creativity is our heartbeat. We constantly challenge
                             ourselves to further our technical prowess and help
                             our customers to deliver exceptional customer
@@ -48,12 +48,12 @@ const ContactPage = () => {
                         </p>
                     </div>
 
-                    <div className="space-y-6">
-                        <div className="flex items-center space-x-4">
-                            <div className="p-3 rounded-full bg-blue-100 text-blue-600">
+                    <div className="space-y-4 sm:space-y-6">
+                        <div className="flex items-center space-x-3 sm:space-x-4">
+                            <div className="p-2 sm:p-3 rounded-full bg-blue-100 text-blue-600">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="h-6 w-6"
+                                    className="h-5 w-5 sm:h-6 sm:w-6"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -67,18 +67,18 @@ const ContactPage = () => {
                                 </svg>
                             </div>
                             <div>
-                                <p className="text-gray-800 font-medium">
+                                <p className="text-gray-800 font-medium text-sm sm:text-base">
                                     Call
                                 </p>
-                                <p className="text-gray-600">+91 76196 35111</p>
+                                <p className="text-gray-600 text-sm sm:text-base">+91 76196 35111</p>
                             </div>
                         </div>
 
-                        <div className="flex items-center space-x-4">
-                            <div className="p-3 rounded-full bg-blue-100 text-blue-600">
+                        <div className="flex items-center space-x-3 sm:space-x-4">
+                            <div className="p-2 sm:p-3 rounded-full bg-blue-100 text-blue-600">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="h-6 w-6"
+                                    className="h-5 w-5 sm:h-6 sm:w-6"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -93,10 +93,10 @@ const ContactPage = () => {
                                 </svg>
                             </div>
                             <div>
-                                <p className="text-gray-800 font-medium">
+                                <p className="text-gray-800 font-medium text-sm sm:text-base">
                                     Whats App
                                 </p>
-                                <p className="text-gray-600 flex items-center space-x-2">
+                                <p className="text-gray-600 flex flex-col sm:flex-row sm:items-center space-y-1 sm:space-y-0 sm:space-x-2 text-sm sm:text-base">
                                     <span className="flex items-center">
                                         <img
                                             src="https://flagcdn.com/w20/in.png" 
@@ -117,11 +117,11 @@ const ContactPage = () => {
                             </div>
                         </div>
 
-                        <div className="flex items-center space-x-4">
-                            <div className="p-3 rounded-full bg-blue-100 text-blue-600">
+                        <div className="flex items-center space-x-3 sm:space-x-4">
+                            <div className="p-2 sm:p-3 rounded-full bg-blue-100 text-blue-600">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="h-6 w-6"
+                                    className="h-5 w-5 sm:h-6 sm:w-6"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -135,10 +135,10 @@ const ContactPage = () => {
                                 </svg>
                             </div>
                             <div>
-                                <p className="text-gray-800 font-medium">
+                                <p className="text-gray-800 font-medium text-sm sm:text-base">
                                     Email
                                 </p>
-                                <p className="text-gray-600">
+                                <p className="text-gray-600 text-sm sm:text-base">
                                     projects@nextwebi.com
                                 </p>
                             </div>
@@ -146,17 +146,17 @@ const ContactPage = () => {
                     </div>
                 </div>
                
-                <div className="w-full md:w-1/2 bg-white shadow-xl rounded-lg overflow-hidden md:-mt-6 md:-mb-10 relative z-10">
+                <div className="w-full lg:w-1/2 bg-white shadow-xl rounded-lg overflow-hidden lg:-mt-6 lg:-mb-10 relative z-10">
                    
-                    <div className="bg-blue-600 text-white py-4 px-8 text-center">
-                        <h2 className="text-2xl md:text-3xl font-bold">
+                    <div className="bg-blue-600  text-white sm:py-4 px-6 sm:px-8 text-center">
+                        <h2 className="text-xl sm:text-2xl mt-6  lg:text-3xl font-bold">
                             Collaborate with Nextwebi
                         </h2>
                     </div>
 
                     <form
                         onSubmit={handleSubmit}
-                        className="p-8 md:p-12 space-y-6"
+                        className="p-6 sm:p-8 lg:p-12 space-y-4 sm:space-y-6"
                     >
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
@@ -219,12 +219,12 @@ const ContactPage = () => {
                                 >
                                     Your Contact Number
                                 </label>
-                                <div className="flex items-center">
-                                    <span className="inline-flex items-center p-3 rounded-l-md bg-gray-100 text-gray-700 border border-gray-300">
+                                <div className="flex items-stretch">
+                                    <span className="inline-flex items-center px-3 rounded-l-md bg-gray-100 text-gray-700 border border-r-0 border-gray-300 text-sm">
                                         <img
                                             src="https://flagcdn.com/w20/in.png" 
                                             alt="India flag"
-                                            className="h-4 w-auto mr-1"
+                                            className="h-5 w-auto mr-2"
                                         />
                                         +91
                                     </span>
@@ -264,7 +264,7 @@ const ContactPage = () => {
                             >
                                 Attach a File
                             </label>
-                            <div className="flex items-center justify-center w-full h-18 border-2 border-dashed border-gray-300 rounded-md bg-white text-gray-600 cursor-pointer hover:border-blue-500 hover:text-blue-500 transition-colors">
+                            <div className="flex items-center justify-center w-full h-16 sm:h-18 border-2 border-dashed border-gray-300 rounded-md bg-white text-gray-600 cursor-pointer hover:border-blue-500 hover:text-blue-500 transition-colors">
                                 <input
                                     type="file"
                                     id="attachFile"
@@ -273,7 +273,7 @@ const ContactPage = () => {
                                 />
                                 <label
                                     htmlFor="attachFile"
-                                    className="cursor-pointer"
+                                    className="cursor-pointer text-sm sm:text-base text-center px-2"
                                 >
                                     Browse or Drop your files here
                                 </label>
@@ -281,7 +281,7 @@ const ContactPage = () => {
                         </div>
 
                         {/* Captcha */}
-                        <div className="flex items-center space-x-3 mt-4">
+                        <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-3 mt-4">
                             <span className="text-gray-700 text-sm font-medium">
                                 Enter captcha results here
                                 <span className="text-red-500">*</span>
@@ -299,7 +299,7 @@ const ContactPage = () => {
                                     onChange={(e) =>
                                         setCaptchaInput(e.target.value)
                                     }
-                                    className="w-24 p-2 rounded-md bg-white border border-gray-300 text-gray-900 text-center"
+                                    className="w-20 sm:w-24 p-2 rounded-md bg-white border border-gray-300 text-gray-900 text-center"
                                 />
                                 <button
                                     type="button"
@@ -309,7 +309,7 @@ const ContactPage = () => {
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        className="h-5 w-5"
+                                        className="h-4 w-4 sm:h-5 sm:w-5"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke="currentColor"

@@ -17,3 +17,241 @@
 .animate-slide-up {
     animation: slide-up 0.6s ease;
 }
+
+/* Global overflow control */
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100vw;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+/* Prevent layout shifts and vertical scrolling issues */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+/* Prevent section height changes */
+section {
+    overflow-x: hidden;
+    width: 100%;
+    min-height: fit-content;
+    position: relative;
+}
+
+/* Fix for Section9 circle animation */
+.circle-item {
+    position: absolute;
+    transform-origin: center;
+    will-change: transform;
+}
+
+/* Prevent animation from causing layout shifts */
+.motion-div {
+    will-change: transform;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+/* Additional fixes for smooth scrolling */
+html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent any element from causing layout shifts */
+img,
+video,
+canvas,
+svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Ensure consistent spacing */
+.container,
+.max-w-7xl {
+    width: 100%;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Fix for any floating elements */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+    /* Improve touch targets */
+    button,
+    a,
+    [role="button"] {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Better scrolling on mobile */
+    html {
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Prevent horizontal scroll */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Improve text readability on mobile */
+    p,
+    span,
+    div {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Better form inputs on mobile */
+    input,
+    textarea,
+    select {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
+
+/* Horizontal scrolling improvements */
+.scrollbar-none {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-none::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+/* Smooth horizontal scrolling */
+.overflow-x-auto {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Category buttons hover effect */
+@media (hover: hover) {
+    .category-btn:hover {
+        transform: translateY(-1px);
+        transition: transform 0.2s ease;
+    }
+}
+
+/* Container max-width control */
+.max-w-7xl {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Swiper container fixes */
+.swiper {
+    overflow: visible;
+}
+
+.swiper-wrapper {
+    overflow: visible;
+}
+
+/* Featured logos swiper improvements */
+.featured-logos-swiper {
+    overflow: hidden;
+}
+
+.featured-logos-swiper .swiper-wrapper {
+    align-items: center;
+}
+
+.featured-logos-swiper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+/* Logo hover effects */
+.featured-logos-swiper img {
+    transition: all 0.3s ease;
+    filter: grayscale(100%);
+}
+
+.featured-logos-swiper img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* Testimonials swiper improvements */
+.testimonials-swiper {
+    overflow: hidden;
+    padding-bottom: 0;
+}
+
+.testimonials-swiper .swiper-wrapper {
+    align-items: stretch;
+}
+
+.testimonials-swiper .swiper-slide {
+    height: auto;
+    display: flex;
+}
+
+/* Custom pagination styling */
+.swiper-pagination {
+    position: relative !important;
+    bottom: 0 !important;
+    margin-top: 1.5rem;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 6px;
+}
+
+.swiper-pagination-bullet {
+    width: 8px !important;
+    height: 8px !important;
+    background: #f1f4f7 !important;
+    opacity: 1 !important;
+    margin: 0 !important;
+    border-radius: 50% !important;
+    transition: all 0.3s ease;
+    cursor: pointer !important;
+    display: inline-block !important;
+}
+
+.swiper-pagination-bullet:hover {
+    background: #94a3b8 !important;
+    transform: scale(1.1);
+}
+
+.swiper-pagination-bullet-active {
+    background: #3b82f6 !important;
+    transform: scale(1.2);
+}
+
+/* Ensure pagination doesn't overlap content */
+.swiper-pagination-bullets {
+    position: relative !important;
+    bottom: 0 !important;
+    margin-top: 1.5rem;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}

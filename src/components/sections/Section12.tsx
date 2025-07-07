@@ -57,55 +57,55 @@ const Section12 = () => {
     }, []);
 
     return (
-        <section className="bg-white py-16">
+        <section className="bg-white py-12 sm:py-16">
             
-            <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center mb-12">
+            <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center mb-8 sm:mb-12">
                 {stats.map((item, i) => (
                     <div
                         key={i}
-                        className="bg-white shadow-md rounded-lg py-4 px-2"
+                        className="bg-white shadow-md rounded-lg py-3 sm:py-4 px-2"
                     >
-                        <p className="text-3xl font-bold text-gray-900">
+                        <p className="text-2xl sm:text-3xl font-bold text-gray-900">
                             {item.count}
                         </p>
-                        <p className="text-gray-600">{item.label}</p>
+                        <p className="text-gray-600 text-xs sm:text-sm">{item.label}</p>
                     </div>
                 ))}
             </div>
 
             
-            <div className="text-center max-w-4xl mx-auto mb-8 px-4">
-                <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
+            <div className="text-center max-w-4xl mx-auto mb-6 sm:mb-8 px-4">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900">
                     Trusted by 600+ Startups and
                 </h2>
-                <h3 className="text-xl md:text-2xl font-bold text-blue-400">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-400">
                     Enterprises across 20+ Nations
                 </h3>
-                <p className="mt-4 text-gray-600 text-sm md:text-base">
+                <p className="mt-3 sm:mt-4 text-gray-600 text-sm md:text-base">
                     Nextwebi delivers high-end IT solutions to businesses and
                     offers the best class web solutions that help your business
                     succeed remarkably.
                 </p>
                 <a
                     href="#"
-                    className="mt-4 inline-flex items-center text-blue-600 font-semibold hover:underline"
+                    className="mt-3 sm:mt-4 inline-flex items-center text-blue-600 font-semibold hover:underline text-sm sm:text-base"
                 >
                     Learn More About Us →
                 </a>
             </div>
 
             
-            <div className="max-w-4xl mx-auto overflow-hidden">
-                <div className="grid grid-cols-4 gap-6">
+            <div className="max-w-4xl mx-auto overflow-hidden px-4">
+                <div className="grid grid-cols-4 sm:grid-cols-4 gap-4 sm:gap-6">
                     {logos.flat().map((src, i) => (
                         <div
                             key={i}
-                            className="flex items-center justify-center p-4 animate-slide-up"
+                            className="flex items-center justify-center p-2 sm:p-4 animate-slide-up"
                         >
                             <img
                                 src={src}
                                 alt={`client-${i}`}
-                                className="max-h-14 md:max-h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                                className="max-h-10 sm:max-h-14 md:max-h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300"
                             />
                         </div>
                     ))}

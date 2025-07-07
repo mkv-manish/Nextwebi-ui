@@ -1,19 +1,19 @@
-import ContactPage from "./components/Contact";
-import Footer from "./components/Footer";
+import ContactPage from "./components/contact us/page";
+import Footer from "./components/footer/page";
 import HeroSection from "./components/HeroSection";
-import Navbar from "./components/Navbar";
-import Section1 from "./components/Section1";
-import Section10 from "./components/Section10";
-import Section11 from "./components/Section11";
-import Section12 from "./components/Section12";
-import Section2 from "./components/Section2";
-import Section3 from "./components/Section3";
-import Section4 from "./components/Section4";
-import Section5 from "./components/Section5";
-import Section6 from "./components/Section6";
-import Section7 from "./components/Section7";
-import Section8 from "./components/Section8";
-import Section9 from "./components/Section9";
+import Navbar from "./components/navbar/page";
+import Section1 from "./components/sections/Section1";
+import Section10 from "./components/sections/Section10";
+import Section11 from "./components/sections/Section11";
+import Section12 from "./components/sections/Section12";
+import Section2 from "./components/sections/Section2";
+import Section3 from "./components/sections/Section3";
+import Section4 from "./components/sections/Section4";
+import Section5 from "./components/sections/Section5";
+import Section6 from "./components/sections/Section6";
+import Section7 from "./components/sections/Section7";
+import Section8 from "./components/sections/Section8";
+import Section9 from "./components/sections/Section9";
 import "./index.css";
 
 function App() {

@@ -28,19 +28,19 @@ const resources = [
 
 const Section1 = () => {
     return (
-        <section className="py-16 bg-white">
+        <section className="py-12 sm:py-16 bg-white">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold mb-2">
+                <div className="text-center mb-8 sm:mb-12">
+                    <h2 className="text-2xl sm:text-3xl font-bold mb-2">
                         Learn from our Resources
                     </h2>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 text-sm sm:text-base">
                         Stay updated with the latest happenings in the world of
                         emerging technologies.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                     {resources.map((item, index) => (
                         <Link
                             to={item.link}
@@ -50,20 +50,20 @@ const Section1 = () => {
                             <img
                                 src={item.image}
                                 alt={item.category}
-                                className="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500"
+                                className="w-full h-56 sm:h-72 object-cover transform group-hover:scale-110 transition duration-500"
                             />
                             <div
-                                className={`absolute inset-0 ${item.overlayColor} flex flex-col justify-end p-6 transition duration-500 group-hover:bg-opacity-80`}
+                                className={`absolute inset-0 ${item.overlayColor} flex flex-col justify-end p-4 sm:p-6 transition duration-500 group-hover:bg-opacity-80`}
                             >
                                 <div className="uppercase text-white text-xs mb-2">
                                     {item.category}
                                 </div>
-                                <h3 className="text-white text-lg font-semibold leading-snug mb-4">
+                                <h3 className="text-white text-base sm:text-lg font-semibold leading-snug mb-3 sm:mb-4">
                                     {item.title}
                                 </h3>
-                                <span className="inline-flex items-center text-white font-medium hover:underline">
+                                <span className="inline-flex items-center text-white font-medium hover:underline text-sm sm:text-base">
                                     Read More{" "}
-                                    <ArrowRight className="ml-1 w-4 h-4" />
+                                    <ArrowRight className="ml-1 w-3 h-3 sm:w-4 sm:h-4" />
                                 </span>
                             </div>
                         </Link>
